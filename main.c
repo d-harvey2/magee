@@ -55,7 +55,7 @@ main(argc, argv, envp)
         printf("\t%2d:\t%s\n", a, argv[a]);
 
     /* show the environment variables of the invoking shell */
-    if (!strcmp(argv[1], "omit" ))
+    if ( (!strcmp(argv[1], "-environment")) || (!strcmp(argv[1], "-env" )) )
     {
         a = 0;
         printf("\nenvironment:\n");
