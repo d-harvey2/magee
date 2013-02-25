@@ -10,7 +10,11 @@
 | |                              
 |_|                              
                                                         
-                                                      
+
+
+programmer notes:
+Mon Feb 25 15:39:07 PST 2013
+    created github acct. d-harvey2 passwd <jimmy's boat>2005
 */
 
 main(argc, argv, envp)
