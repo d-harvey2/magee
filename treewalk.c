@@ -1,15 +1,30 @@
+/*-set ts=4 sw=4 sts=4 et nonu */   // to make vim happy
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
 /*
- * _                               _ _    
+ *  _                               _ _    
  * | |                             | | |   
  * | |_ _ __ ___  _____      ____ _| | | __
  * | __| '__/ _ \/ _ \ \ /\ / / _` | | |/ /
  * | |_| | |  __/  __/\ V  V / (_| | |   < 
- *  \__|_|  \___|\___| \_/\_/ \__,_|_|_|\_\
- *
+ *  \__|_|  \___|\___| \_/\_/ \__,_|_|_|\_\ 
+ *                          
+*/
+
+// the following to make lawyers happy
+/*
+
+TITLE: GNU Free Documentation License
+
+Copyright (C)  2013  Donald Cory Harvey [d.harvey2@ctec.clark.edu] for Clark College
+       Permission is granted to copy, distribute and/or modify this document
+       under the terms of the GNU Free Documentation License, Version 1.3
+       or any later version published by the Free Software Foundation;
+       with no Invariant Sections, no Front-Cover Texts, and no Back-Cover
+       Texts.  A copy of the license is included in the section entitled ``GNU
+       Free Documentation License'.
+
 */
 
 struct tnode {         // tree structure node type
