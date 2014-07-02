@@ -1,4 +1,4 @@
-/*-set ts=4 sw=4 sts=4 et nonu */   // to make vim happy
+/*set ts=4 sw=4 sts=4 et nonu */   // to make vim happy
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -8,7 +8,7 @@
  * | |_ _ __ ___  _____      ____ _| | | __
  * | __| '__/ _ \/ _ \ \ /\ / / _` | | |/ /
  * | |_| | |  __/  __/\ V  V / (_| | |   < 
- *  \__|_|  \___|\___| \_/\_/ \__,_|_|_|\_\ 
+ *  \__|_|  \___|\___| \_/\_/ \__,_|_|_|\_\_
  *                          
 */
 

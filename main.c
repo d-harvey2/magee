@@ -1,19 +1,19 @@
-/*-set ts=4 sw=4 sts=4 et nonu */   // to make vim happy
+/*set ts=4 sw=4 sts=4 et nonu */    // to make vim happy
 #include <stdio.h>                  // for printf()
 #include <string.h>                 // for strlen() & etc.
 #include <unistd.h>                 // for getopt()
-#include <limits.h>                 // CHAR_BIT
+#include <limits.h>                 // for CHAR_BIT
 
 // the following to make printouts harder to lose
 /* 
 
- _ __   __ _ _ __ __ _ _ __ ____ 
-| '_ \ / _` | '__/ _` | '_ ` _  |      
-| |_) | (_| | | | (_| | | | | | |
-| .__/ \__,_|_|  \__,_|_| |_| |_|
-| |                              
-|_|                              
-                                                        
+                                                       _       
+ _ __ ___   __ _  __ _  ___  ___       _ __ ___   __ _(_)_ __  
+| '_ ` _ \ / _` |/ _` |/ _ \/ _ \_____| '_ ` _ \ / _` | | '_ \.
+| | | | | | (_| | (_| |  __/  __/_____| | | | | | (_| | | | | |
+|_| |_| |_|\__,_|\__, |\___|\___|     |_| |_| |_|\__,_|_|_| |_|
+                 |___/                                         
+
 
 
 programmer notes:
@@ -44,13 +44,15 @@ main(argc, argv, envp)
     int *p;                  /* used to snake out the size of a pointer */
     int a;                   /* re-used loop index variable */
     int opt = 1;             /* return from getopt() */
-    static const char *optString = "cepsth?";  // see getopt() documentation
+    static const char *optString = "f:ucepsth?";  // see getopt() documentation
                              /* 
                                c - show command
                                p - show parameters
+                               u - get input from user
+                               f - get command line from a file
                                e - show environment variables
                                s - show computer specific information
-                               t - exercise a binary tree -- for now
+                               t - exercise a meaningless binary tree -- for now
                                h - show full help table
                                ? - show quick help list
                              */   
@@ -63,7 +65,7 @@ if (argc==1) {
 }
 
 
-// getopt() processing--see also getopt_long() for support of -- prefix support
+// getopt() processing--see also getopt_long() for support of -- prefix switches
 // note, though, that getopt() is posix compliant, but getopt_long() isn't
 while((opt=getopt(argc, argv, optString)) != -1 ) {
     switch( opt ) {
@@ -80,10 +82,22 @@ while((opt=getopt(argc, argv, optString)) != -1 ) {
             printf("\nswitches:\n");
             printf("    -c    to display the invoking command\n");
             printf("    -p    to display the command line parameters\n");
+            printf("    -f    to get commands from a file, specify a file name\n");
+            printf("    -u    to get commands from the user interactively\n");
             printf("    -e    to display the inherited environmental variables\n");
             printf("    -s    to display computer specific structure information\n");
             printf("    -t    to execute simulation \n");
             printf("    -h    to display more complete help\n");
+            break;
+            
+        case 'u':
+            // printf("\ncommand:\t%s: \n", argv[0]);              
+            printf("\nstubbed out prompt user for input\n");              
+            break;
+            
+        case 'f':
+            // printf("\ncommand:\t%s: \n", argv[0]);              
+            printf("\nstubbed out prompt for get input from file:  %s\n", optarg);              
             break;
             
         case 't':
@@ -124,7 +138,7 @@ while((opt=getopt(argc, argv, optString)) != -1 ) {
         default:
             printf("using getopt(), You shouldn't ever get here.\n");
             printf("getopt() intercepts invalid input\n");
-            printf("and errors out directly, then returns ?.\n");
+            printf("and errors out directly, then returns ?\n");
             break;
     }
 }
