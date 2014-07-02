@@ -26,7 +26,7 @@ Mon Feb 25 15:39:07 PST 2013
 
 TITLE: GNU Free Documentation License
 
-Copyright (C)  2013  Donald Cory Harvey [d.harvey2@ctec.clark.edu] for Clark College
+Copyright (C)  2014  Donald Cory Harvey [d.harvey2@ctec.clark.edu] for Clark College
        Permission is granted to copy, distribute and/or modify this document
        under the terms of the GNU Free Documentation License, Version 1.3
        or any later version published by the Free Software Foundation;
@@ -57,28 +57,19 @@ main(argc, argv, envp)
                                ? - show quick help list
                              */   
      
+/* 
+   getopt() processing--see also getopt_long() for support of -- prefix switches
+   note, though, that getopt() is posix compliant, but getopt_long() isn't
 
-// if there are no arguments
-if (argc==1) {
+   I find it easiest to arrange getopt() switch statement processing so that
+   all the help is grouped tightly together at the top.
+*/
+if (argc==1) {                 // no arguments given
     printf("\n-? switch for help\n");
-    return;
-}
-
-
-// getopt() processing--see also getopt_long() for support of -- prefix switches
-// note, though, that getopt() is posix compliant, but getopt_long() isn't
+    return;  }
 while((opt=getopt(argc, argv, optString)) != -1 ) {
-    switch( opt ) {
-
-        case 'h':   
-            printf("\nno long help yet  00  this is fake\n");
-            printf("this program prints out its own invocation\n");
-            printf("give an 'omit' parameter to suppress environment variables\n"); 
-            printf("give a 'full' parameter to see the environment variables\n"); 
-            printf("give a '?' parameter to see this list again\n"); 
-            break;        
-
-        case '?':
+    switch( opt ) {            
+        case '?':              // invalid switch, or short help requested
             printf("\nswitches:\n");
             printf("    -c    to display the invoking command\n");
             printf("    -p    to display the command line parameters\n");
@@ -89,7 +80,15 @@ while((opt=getopt(argc, argv, optString)) != -1 ) {
             printf("    -t    to execute simulation \n");
             printf("    -h    to display more complete help\n");
             break;
-            
+        case 'h':              // long help requested
+            printf("\nno long help yet  00  this is fake\n");
+            printf("this program prints out its own invocation\n");
+            printf("give an 'omit' parameter to suppress environment variables\n"); 
+            printf("give a 'full' parameter to see the environment variables\n"); 
+            printf("give a '?' parameter to see this list again\n"); 
+            break;        
+
+
         case 'u':
             // printf("\ncommand:\t%s: \n", argv[0]);              
             printf("\nstubbed out prompt user for input\n");              
