@@ -19,6 +19,7 @@
 programmer notes:
 Mon Feb 25 15:39:07 PST 2013
     created github acct. d-harvey2 passwd <jimmy's boat>2005
+    pull from https://github.com/d-harvey2/magee.git
 */
 
 // the following to make lawyers happy
@@ -31,11 +32,11 @@ Copyright (C)  2014  Donald Cory Harvey [d.harvey2@ctec.clark.edu] for Clark Col
        under the terms of the GNU Free Documentation License, Version 1.3
        or any later version published by the Free Software Foundation;
        with no Invariant Sections, no Front-Cover Texts, and no Back-Cover
-       Texts.  A copy of the license is included in the section entitled ``GNU
+       Texts.  A copy of the license is included in the section entitled ''GNU
        Free Documentation License''.
 */
 
-main(argc, argv, envp)
+main(argc, argv, envp)       /* this is the emulation engine, no display here */
     int argc;                /* Number of args */
     char *argv[];            /* Argument ptr array */
     char *envp[];            /* Environment ptr array */
@@ -91,7 +92,7 @@ while((opt=getopt(argc, argv, optString)) != -1 ) {
 
         case 'u':
             // printf("\ncommand:\t%s: \n", argv[0]);              
-            printf("\nstubbed out prompt user for input\n");              
+            printf("\nstubbed out -- prompt user for input\n");              
             break;
             
         case 'f':
@@ -132,7 +133,7 @@ while((opt=getopt(argc, argv, optString)) != -1 ) {
             printf("\n    size of float = %d bytes ", sizeof(float));
             printf("\n    size of double = %d bytes ", sizeof(double));
             printf("\n    size of integer pointer = %d bytes \n", sizeof(&p));
-             break;
+            break;
 
         default:
             printf("using getopt(), You shouldn't ever get here.\n");
