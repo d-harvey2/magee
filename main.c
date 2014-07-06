@@ -82,22 +82,23 @@ while((opt=getopt(argc, argv, optString)) != -1 ) {
             printf("    -h    to display more complete help\n");
             break;
         case 'h':              // long help requested
-            printf("\nno long help yet  00  this is fake\n");
-            printf("this program prints out its own invocation\n");
-            printf("give an 'omit' parameter to suppress environment variables\n"); 
-            printf("give a 'full' parameter to see the environment variables\n"); 
-            printf("give a '?' parameter to see this list again\n"); 
+            printf("\nThis is a general purpose emulation engine.\n");
+            printf("It does not have a display built in.  Instead, it pumps\n");
+            printf("out a sort of pseudo code to stdout, where some other program\n"); 
+            printf("interprets it as display code.  The setup and initialization\n"); 
+            printf("for a particular emulation comes from the file invoked\n"); 
+            printf("with the -f switch.\n"); 
             break;        
 
 
         case 'u':
             // printf("\ncommand:\t%s: \n", argv[0]);              
-            printf("\nstubbed out -- prompt user for input\n");              
+            printf("\nstubbed out -- prompt user for input file\n");              
             break;
             
         case 'f':
             // printf("\ncommand:\t%s: \n", argv[0]);              
-            printf("\nstubbed out prompt for get input from file:  %s\n", optarg);              
+            printf("\nstubbed out -- get input from file:  %s\n", optarg);              
             break;
             
         case 't':
@@ -155,3 +156,19 @@ while (optind < argc)
 printf("\n");
 return 0;
 }
+
+
+/*
+ * Programmer misc.:
+ *
+ * to install git from ubuntu:
+ *
+ *     sudo apt-get install git-core
+ *
+ * however, this is not the current version.  To update:
+ *
+ *     sudo add-apt-repository ppa:git-core/ppa
+ *     sudo apt-get update
+ *      sudo apt-get install git
+ *
+ */
