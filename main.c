@@ -36,7 +36,10 @@ Copyright (C)  2014  Donald Cory Harvey [d.harvey2@ctec.clark.edu] for Clark Col
        Free Documentation License''.
 */
 
-main(argc, argv, envp)       /* this is the emulation engine, no display here */
+/* prototypes: */
+int treewalk();
+
+int main(argc, argv, envp)   /* this is the emulation engine, no display here */
     int argc;                /* Number of args */
     char *argv[];            /* Argument ptr array */
     char *envp[];            /* Environment ptr array */
@@ -67,7 +70,7 @@ main(argc, argv, envp)       /* this is the emulation engine, no display here */
 */
 if (argc==1) {                 // no arguments given
     printf("\n-? switch for help\n");
-    return;  }
+    return 1;  }
 while((opt=getopt(argc, argv, optString)) != -1 ) {
     switch( opt ) {            
         case '?':              // invalid switch, or short help requested
@@ -80,7 +83,7 @@ while((opt=getopt(argc, argv, optString)) != -1 ) {
             printf("    -s    to display computer specific structure information\n");
             printf("    -t    to execute simulation \n");
             printf("    -h    to display more complete help\n");
-            break;
+            return 1;
         case 'h':              // long help requested
             printf("\nThis is a general purpose emulation engine.\n");
             printf("It does not have a display built in.  Instead, it pumps\n");
@@ -88,7 +91,7 @@ while((opt=getopt(argc, argv, optString)) != -1 ) {
             printf("interprets it as display code.  The setup and initialization\n"); 
             printf("for a particular emulation comes from the file invoked\n"); 
             printf("with the -f switch.\n"); 
-            break;        
+            return 1;        
 
 
         case 'u':
@@ -119,7 +122,10 @@ while((opt=getopt(argc, argv, optString)) != -1 ) {
             /* show the environment variables of the invoking shell */
                 a = 0;
                 printf("\nenvironment:\n");
-                while (envp[a] != NULL) printf("%i\t%s\n", a, envp[a++]);
+                while (envp[a] != NULL) {
+                    printf("%i\t%s\n", a, envp[a]);
+                    a++;
+                }
             break;
            
         case 's':
@@ -169,6 +175,9 @@ return 0;
  *
  *     sudo add-apt-repository ppa:git-core/ppa
  *     sudo apt-get update
- *      sudo apt-get install git
+ *     sudo apt-get install git
  *
+ * the unix kernal style sheet is here:
+ *
+ *     https://www.kernel.org/doc/Documentation/CodingStyle
  */
