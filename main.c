@@ -167,7 +167,10 @@ return 0;
 /*
  * Programmer misc.:
  *
- * to install git from ubuntu:
+ * debian is the mothership for apt-get, but GNU and ubuntu seem
+ * to be providing most of commonly accessed apt-get repositories.
+ *
+ * to install git from ubuntu/debian/GNU:
  *
  *     sudo apt-get install git-core
  *
@@ -177,7 +180,35 @@ return 0;
  *     sudo apt-get update
  *     sudo apt-get install git
  *
+ * It is recommended to use 
+ *
+ *     sudo apt-get update
+ *
+ * frequently.
+ *
+ * ....
+ * 
+ *
+ * to originate a gethub repository:
+ *
+ *     git init
+ *     (set up a repository in your account on gethub)
+ *     git remote add origin https://github.com/<username>/<reponame>.git
+ *     git push -u origin master
+ *
+ * officially recommended help with git
+ *
+ *     help.github.com
+ *     http://git-scm.com/book
+ *     training.github.com
+ *     windows.github.com
+ *
+ * ....
+ *
+ *
  * the unix kernal style sheet is here:
  *
  *     https://www.kernel.org/doc/Documentation/CodingStyle
+ * 
+ * 
  */

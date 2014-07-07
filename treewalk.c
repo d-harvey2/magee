@@ -67,7 +67,7 @@ void walktree(struct tnode * ptr){
 }
 
 
-treewalk(){
+int treewalk(){
     int x = 0;
     struct tnode *root;
     char buf[20];
@@ -83,4 +83,5 @@ treewalk(){
         fh = rh;
     }
     walktree(root);
+    return 0;
 }
