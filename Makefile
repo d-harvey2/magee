@@ -1,8 +1,6 @@
 #
 #
 #
-# hash is comment leader in makefiles
-#
 # P     = program
 # CC    = compiler
 # CFLAGS= -g to debug, -Wall to include compiler warnings
