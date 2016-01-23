@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+
+supposedly, the xml statement must come first
+
+javascript comments as in c
+css comments as in old c (no doubleslash)
+
+
+
+
+/* javascript fragment */	
+
+var G=document.getElementByTagName("g")
+var A=new Array()
+for (i in G){
+ if (G.item(i).nodeName=="rect")
+  if (G.item(i).getAttribute("fill")=="yellow")
+  A.push(G.item(i))
+}
+
+
+12 point Ariel, 9 point Verdana
+
+
+application/xhtml+xml instead of text/html
+when xml-ing
+
+http://hixie.ch/advocacy/xhtml
+www.webstandards.org
+
+
+-->
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+        <meta http-equiv="Content-Type" content="application/xhtml+xml charset=utf-8">
+ 	<link type="text/css" rel="stylesheet" href="global.css" />
+</head>
+ 
+<body>
+<!-- comments in html (body) -->
+
+    <h4> this is experimental svg tests </h4>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+     <defs>
+      <g id="cell">
+      <rect x="0" y="0" 
+            width="20" 
+            height="20" 
+            fill="lime" 
+            stroke-width="0" 
+            stroke="pink" />
+      <circle 
+            cx="10" cy="10" 
+            r="9" 
+            fill="green" />
+     </g>
+     </defs>
+     <use x="0" y="0" xlink:href="#cell" />
+     <use x="20" y="0" xlink:href="#cell" /> 
+     <use x="40" y="0" xlink:href="#cell" />
+     <use x="60" y="0" xlink:href="#cell" />
+     <use x="80" y="0" xlink:href="#cell" />
+     <use x="100" y="0" xlink:href="#cell" />
+     <use x="120" y="0" xlink:href="#cell" />
+     <use x="140" y="0" xlink:href="#cell" />
+
+     <use x="0" y="20" xlink:href="#cell" />
+     <use x="20" y="20" xlink:href="#cell" />
+     <use x="40" y="20" xlink:href="#cell" />
+     <use x="60" y="20" xlink:href="#cell" />
+     <use x="80" y="20" xlink:href="#cell" />
+     <use x="100" y="20" xlink:href="#cell" />
+     <use x="120" y="20" xlink:href="#cell" />
+     <use x="140" y="20" xlink:href="#cell" />
+
+
+     <use x="0" y="40" xlink:href="#cell" />
+     <use x="20" y="40" xlink:href="#cell" />
+     <use x="40" y="40" xlink:href="#cell" />
+     <use x="60" y="40" xlink:href="#cell" />
+     <use x="80" y="40" xlink:href="#cell" />
+     <use x="100" y="40" xlink:href="#cell" />
+     <use x="120" y="40" xlink:href="#cell" />
+     <use x="140" y="40" xlink:href="#cell" />
+
+     <use x="0" y="60" xlink:href="#cell" />
+     <use x="20" y="60" xlink:href="#cell" />
+     <use x="40" y="60" xlink:href="#cell" />
+     <use x="60" y="60" xlink:href="#cell" />
+     <use x="80" y="60" xlink:href="#cell" />
+     <use x="100" y="60" xlink:href="#cell" />
+     <use x="120" y="60" xlink:href="#cell" />
+     <use x="140" y="60" xlink:href="#cell" />
+
+
+     <use x="0" y="80" xlink:href="#cell" />
+     <use x="20" y="80" xlink:href="#cell" /> 
+     <use x="40" y="80" xlink:href="#cell" />
+     <use x="60" y="80" xlink:href="#cell" />
+     <use x="80" y="80" xlink:href="#cell" />
+     <use x="100" y="80" xlink:href="#cell" />
+     <use x="120" y="80" xlink:href="#cell" />
+     <use x="140" y="80" xlink:href="#cell" />
+
+     <use x="0" y="100" xlink:href="#cell" />
+     <use x="20" y="100" xlink:href="#cell" />
+     <use x="40" y="100" xlink:href="#cell" />
+     <use x="60" y="100" xlink:href="#cell" />
+     <use x="80" y="100" xlink:href="#cell" />
+     <use x="100" y="100" xlink:href="#cell" />
+     <use x="120" y="100" xlink:href="#cell" />
+     <use x="140" y="100" xlink:href="#cell" />
+
+
+     <use x="0" y="120" xlink:href="#cell" />
+     <use x="20" y="120" xlink:href="#cell" />
+     <use x="40" y="120" xlink:href="#cell" />
+     <use x="60" y="120" xlink:href="#cell" />
+     <use x="80" y="120" xlink:href="#cell" />
+     <use x="100" y="120" xlink:href="#cell" />
+     <use x="120" y="120" xlink:href="#cell" />
+     <use x="140" y="120" xlink:href="#cell" />
+
+     <use x="0" y="140" xlink:href="#cell" />
+     <use x="20" y="140" xlink:href="#cell" />
+     <use x="40" y="140" xlink:href="#cell" />
+     <use x="60" y="140" xlink:href="#cell" />
+     <use x="80" y="140" xlink:href="#cell" />
+     <use x="100" y="140" xlink:href="#cell" />
+     <use x="120" y="140" xlink:href="#cell" />
+     <use x="140" y="140" xlink:href="#cell" />
+
+
+    </svg>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 #
-#
+#  questions?:  donald.cory.harvey@gmail.com
 #
 # P     = program
 # CC    = compiler
@@ -27,6 +27,6 @@ clean:
 # Note the two difference ways of removing the target.
 # if you have multiple lines a new shell is pooped out
 # for each line.  Backslashes are ok for line continuation.
-#
+# Makefiles require tabs to begin execution lines.
 #
 #
