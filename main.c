@@ -186,6 +186,9 @@ return 0;
  *
  * frequently.
  *
+ *
+ *
+ *
  * ....
  * 
  *
@@ -204,7 +207,12 @@ return 0;
  *     windows.github.com
  *
  * ....
- *
+ * so the normal course of events is:
+ *     git add <filename>
+ *       rinse and repeat for every file
+ *     git commit -m "explain what you did in a global sense"
+ *     git push origin master
+ *     git status is used to check your work before commiting or pushing
  *
  * the unix kernal style sheet is here:
  *
