@@ -35,7 +35,7 @@ www.webstandards.org
 
 
 <!--/* javascript fragment */ -->	
-<script name=script01 type="text/javascript">
+<script type="/javascript">
 function change_color () {
 var G=document.getElementByTagName("g")
 var A=new Array()
@@ -50,6 +50,14 @@ for (i in G){
 </script>
 
 
+<!--/* javascript fragment */ -->	
+<script type="/javascript">
+function saysomething() {
+  alert("hello again");
+  }
+</script>
+
+
 
 </head>
  
@@ -58,7 +66,9 @@ for (i in G){
 
     <h4> thiss is experimental svg tests </h4>
 
-    <p><button onclick="change_color()">Click me</button></p>
+    <p><button onclick="change_color();">Click me</button></p>
+    <p><button onclick="alert('hello');">Click me too</button></p>
+    <p><button onclick="alert('saysomething()');">Click me two</button></p>
 
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
      <defs>
