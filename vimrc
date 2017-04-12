@@ -3,6 +3,8 @@
 " file to be active.
 "
 " personal display prejudices
+wildmenu                      " fancies up tab completions
+set path+=**                  " makes :find recurse down the local path
 set modeline                  " accept settings from file being edited
 set modelines=5               " standard no. of lines to look into a file
 set encoding=utf-8            " defaults to latin1
@@ -15,7 +17,7 @@ set number                    " display line # on far left
 set visualbell                " flash, don't ring
 set ruler                     " show info on bottom line+1
 set laststatus=2              " always display the status line 
-syntax on                     " show syntax elements by distinct color
+syntax off                    " show syntax elements by distinct color
 "
 "
 filetype plugin on            " enable plugin scripts & such
